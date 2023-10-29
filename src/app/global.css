@@ -67,9 +67,7 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+ 
   body {
     @apply bg-background text-foreground;
   }
@@ -79,33 +77,31 @@
   }
 
   h2 {
-    @apply text-3xl font-semibold tracking-tight;
+    @apply text-3xl font-semibold tracking-tight ;
   }
 
   h3 {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply text-2xl font-semibold tracking-tight ;
   }
 
   h4 {
-    @apply text-xl font-semibold tracking-tight;
+    @apply text-xl font-semibold tracking-tight ;
   }
 
-  p {
-    @apply leading-7 [&:not(:first-child)]:mt-6;
-  }
+  
 
   .link {
-    @apply text-primary hover:text-primary/90;
+    @apply text-primary hover:text-blue-500;
   }
 }
 
 .nav-link {
-  @apply rounded-md px-6 py-2 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none;
+  @apply rounded-md  px-3 py-2 hover:bg-accent 
 }
 
 /* Post styles */
 
-.prose .anchor {
+/* .prose .anchor {
   @apply absolute invisible no-underline;
 
   margin-left: -1em;
@@ -113,41 +109,41 @@
   width: 80%;
   max-width: 700px;
   cursor: pointer;
-}
+} */
 
-.anchor:hover {
+/* .anchor:hover {
   @apply visible;
-}
+} */
 
 .prose a {
-  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600  decoration-[0.1em];
 }
 
-.prose .anchor:after {
+/* .prose .anchor:after {
   @apply text-neutral-300 dark:text-neutral-700;
   content: '#';
 }
 
 .prose *:hover > .anchor {
   @apply visible;
-}
+} */
 
 .prose pre {
-  @apply border border-neutral-800;
+  @apply rounded-xl border border-gray-600;
 }
 
 .prose code {
-  @apply text-neutral-800 dark:text-neutral-200 px-1 py-0.5 border border-neutral-100 dark:border-neutral-800 rounded-lg;
+  @apply text-neutral-800 dark:text-neutral-200 px-1 py-0.5 border border-neutral-100 dark:border-neutral-800 rounded-lg min-w-full;
 }
 
 .prose pre code {
-  @apply text-neutral-800 dark:text-neutral-200;
+  @apply text-neutral-800 dark:text-neutral-200 ;
   border: initial;
 }
 
 .prose img {
   /* Don't apply styles to next/image */
-  @apply m-0;
+  @apply m-0 hover:scale-105 duration-300;
 }
 
 .prose > :first-child {
@@ -161,13 +157,14 @@ pre[class*='language-'] {
   @apply text-neutral-50;
 }
 
-pre::-webkit-scrollbar {
+/* pre::-webkit-scrollbar {
   display: none;
-}
+} */
 
 pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  /* -ms-overflow-style: none;  */
+  /* scrollbar-width: none;  */
+  
 }
 
 /* Remove Safari input shadow on mobile */
@@ -186,6 +183,8 @@ input[type='email'] {
 .prose .callout > p {
   margin: 0 !important;
 }
+
+
 
 [data-rehype-pretty-code-fragment] code {
   @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-black;
