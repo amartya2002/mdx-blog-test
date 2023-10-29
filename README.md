@@ -1,10 +1,9 @@
 This Next.js starter template can be used for your blog or personal sites. It's built with the following technologies:
 
-    Next.js App Router
-    Content processing with Contentlayer
-    Writing posts with MDX
-    UI components with shadcn-ui
-    Styling with Tailwind CSS
+Next.js App Router
+Content processing with Contentlayer
+Writing posts with MDX
+Styling with Tailwind CSS
 
 This starter template is heavily inspired by Lee Robinson's blog
 
