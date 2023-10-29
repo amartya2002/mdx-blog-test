@@ -6,6 +6,7 @@ import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import './global.css'
+import Header from './Header'
 
 const meta = {
   title: 'Hunter Chang - Website',
@@ -53,27 +54,40 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <header className="py-4">
+
+          {/* <header className="py-4 ">
+
+            <div className="flex  items-center  px-6">
+              <p className='font-semibold text-xl'>Komponents</p>
+              <Navigation />
+              <ThemeSwitch />
+            </div>
+
+          </header> */}
+
+          <Header />
+
+          <main className="mt-20"
+          >
+
             <Container>
-              <div className="flex items-center justify-between py-6">
-                <Navigation />
-                <ThemeSwitch />
-              </div>
+
+              {children}
             </Container>
-          </header>
-          <main>
-            <Container>{children}</Container>
+
           </main>
+
           <footer className="py-16">
             <Container>
               <p>
                 Built by{' '}
                 <Link className="link" href="https://twitter.com/hunterhchang">
-                  Hunter Chang
+                  Amartya Sinha
                 </Link>
               </p>
             </Container>
           </footer>
+
         </ThemeProvider>
       </body>
     </html>
