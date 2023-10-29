@@ -9,9 +9,9 @@ import './global.css'
 import Header from './Header'
 
 const meta = {
-  title: 'Hunter Chang - Website',
+  title: 'Amartya Sinha - MDX Blog test',
   description:
-    'Sleep deprived father. FE Engineer in China. Lover of Ramen and Kpop',
+    'Hello',
   image: `${WEBSITE_HOST_URL}/og-preview.jpg`,
 }
 
